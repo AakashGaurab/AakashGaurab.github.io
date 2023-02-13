@@ -1,0 +1,28 @@
+body{
+    font-family: cursive;
+}
+body a{
+  text-decoration: none;
+  color: black;
+}
+
+#nav-menu{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#nav-menu>div:nth-child(2){
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#home{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+
+}
