@@ -1,11 +1,12 @@
 body{
     width: 90%;
     margin: auto;
-    font-family: cursive;
+    font-family: 'Poppins', sans-serif;
+    
 }
 body a{
   text-decoration: none;
-  color: black;
+  
 }
 
 #nav-menu{
@@ -14,7 +15,9 @@ body a{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+    position:fixed;
+    background-color: black;
+    color: beige;
 }
 #nav-menu>div:nth-child(2){
     width: 40%;
@@ -24,6 +27,59 @@ body a{
 
 #home{
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    align-items:center ;
+    background-color: black;
+    color: azure;
+}
+.home-img{
+    margin-top: 50px;
+}
+.typing{
+    color: rgb(57, 57, 187);
+    text-decoration: underline;
+}
 
+.backline {
+    width: 45%;
+    height: 1px;
+    background-color: #ff004f;
+}
+
+.about-section div:nth-child(1){
+   display: flex;
+   align-items: center;
+}
+.about-section div:nth-child(2){
+    text-align: center;
+}
+
+#skills{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 2%;
+    background-color: black;
+    color: azure;
+}
+.skills-card{
+    text-align: center;
+}
+#projects{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5%;
+}
+#projects img{
+    width: 100%;
+}
+.project-card{
+    text-align: center;
+}
+.project-card div{
+    display: flex;
+    justify-content:space-around;
+}
+#contact{
+    background-color: black;
+    color: azure;
 }
