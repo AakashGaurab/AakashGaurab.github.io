@@ -41,7 +41,7 @@
         </div>
         
         <div>
-            <img src="./20230126_111018-removebg-preview (1).png" alt="Profile Photo" class="home-img">
+            <img src="./20230126_111018-removebg-preview__2_-removebg-preview.png" alt="Profile Photo" class="home-img">
         </div>
         
     </div>
@@ -50,11 +50,11 @@
     <div id="about" class="about-section">
         <div>
            <div class="backline"></div>
-           <h3>About &nbsp;ME</h3>
+           <h3 style="font-size:22px;font-weight:bold;color: rgb(238, 119, 119);">About &nbsp;ME</h3>
            <div class="backline"></div>
         </div>
         <div>
-            <p style="font-size: large;">A competent NodeJs backend developer, with a strong proficiency in designing and implementing complex systems using various technologies. A deep understanding of data structures, algorithms which enables me to create efficient, scalable, and maintainable code. haveing a passion for constantly improving my skills and taking on new challenges. </p>
+            <p style="font-size: large;">A competent NodeJs backend developer, with a strong proficiency in designing and implementing complex systems using various technologies. A deep understanding of data structures, algorithms which enables me to create efficient, scalable, and maintainable code. haveing a passion for constantly improving my skills and taking on new challenges. Some of the Skils that I have learned are listed below </p>
         </div>
     </div>
 
@@ -100,25 +100,29 @@
 
        <div class="skills-card">
         <img src="https://chiranjeev-thapliyal.vercel.app/svg/mysql-logo.svg" alt="Skills Logo" class="skills-card-img">
-        <h3 class="skills-card-name">MongoDB</h3>
+        <h3 class="skills-card-name">My SQL</h3>
        </div>
     </div>
 
 
     <!-- ****************************projects ************* -->
+
+    <div class="skills_word">
+      <div class="backline"></div>
+      <h3>Checkout My Projects</h3>
+      <div class="backline"></div>
+   </div>
     <div id="projects">
        <div class="project-card">
         <img src="./Belk.png" alt="">
         <h3 class="project-title">Quickest-seashore</h3>
          <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, corporis.
          </p>
-         <ul class="project-tech-stack">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>NodeJS</li>
-            <li>MongoDB</li>
-            <li>Express</li>
-         </ul>
+         <div>
+          <img src="https://chiranjeev-thapliyal.vercel.app/svg/nodejs.svg" alt="Skills Logo" class="skills-card-img">
+          <img src="https://chiranjeev-thapliyal.vercel.app/svg/mongodb.svg" alt="Skills Logo" class="skills-card-img">
+          <img src="https://chiranjeev-thapliyal.vercel.app/svg/html-5.svg" alt="Skills Logo" class="skills-card-img">
+         </div>
          <div>
             <a href="https://github.com/AakashGaurab/quickest-seashore-9367" class="project-github-link">GitHub link </a>
            <a href="https://mellow-manatee-be0e70.netlify.app/" class="project-deployed-link" >Project Deployed Link</a>
@@ -131,13 +135,12 @@
         <h3 class="project-title">Quickest-seashore</h3>
          <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, corporis.
          </p>
-         <ul class="project-tech-stack">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>NodeJS</li>
-            <li>MongoDB</li>
-            <li>Express</li>
-         </ul>
+         <div>
+          <p>HTML</p>
+          <p>CSS</p>
+          <p>Nodejs</p>
+          <p>MongoDB</p>
+         </div>
          <div>
             <a href="https://github.com/AakashGaurab/quickest-seashore-9367" class="project-github-link">GitHub link </a>
            <a href="https://mellow-manatee-be0e70.netlify.app/" class="project-deployed-link" >Project Deployed Link</a>
@@ -206,29 +209,28 @@
 
     <!-- ****************contact ************************ -->
     <div id="contact">
-       <a id="contact-github" href="https://github.com/AakashGaurab">GitHub</a>
+
+    <h2>Contact ME</h2>
+    <div>
+      <div>
+        <h2>Hi Here are My Contacts</h2>
+      </div>
+      <div></div>
+    </div>
+       <!-- <a id="contact-github" href="https://github.com/AakashGaurab">GitHub</a>
        <a id="contact-linkedin" href="https://www.linkedin.com/in/aakash-gaurab-99b11b1a1/">LinkedIn</a>
        <p id="contact-phone">+91 78089 27193</p>
-       <p id="contact-email">aakashgaurav456@gmail.com</p>
+       <p id="contact-email">aakashgaurav456@gmail.com</p> -->
     </div>
 
-    <div >
+    <div class="git_status">
         <img id="github-streak-stats" src="https://github-readme-streak-stats.herokuapp.com?user=AakashGaurab" alt="">
-    </div>
-    
-    <div >
         <img id="github-top-langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AakashGaurab&layout=compact" alt="">
-    </div>
-    
-    <div >
         <img id="github-stats-card" src="https://github-readme-stats.vercel.app/api?username=AakashGaurab&show_icons=true" alt="">
-
     </div>
-    
     
     <div class="react-activity-calendar">
         <!-- Loading stuff -->
-        Loading the data just for you.
     </div>
 </body>
 <script
@@ -258,5 +260,14 @@ var typed = new Typed(".typing", {
     loop: true,
   });
 
+
+
+let docTitle = document.title;
+window.addEventListener("blur", () => {
+  document.title = "Please come back :'(";
+});
+window.addEventListener("focus", () => {
+  document.title = docTitle;
+});
 </script>
 </html>
