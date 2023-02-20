@@ -93,7 +93,21 @@ body a{
 }
 
 
-#contact{
+.contact{
     width: 90%;
-    margin: 10% auto;
+    margin: auto;
+}
+.contact div{
+    padding: 1%;
+}
+.contact_me{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10%;
+}
+.contact_me h3{
+    font-size:22px;
+    font-weight:bold;
+    color: rgb(238, 119, 119);
 }
