@@ -20,7 +20,7 @@ body a{
 #nav-menu>div:nth-child(2){
     width: 40%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 #home{
