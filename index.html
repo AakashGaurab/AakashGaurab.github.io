@@ -152,8 +152,6 @@ html{
 }
 .contact-right form{
     width: 100%;
-    border: 0;
-    outline: none;
     background: #262626;
     padding: 15px;
     margin: 15px 0;
@@ -164,6 +162,33 @@ html{
 
 .awai{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form input{
+    margin: 3% 0%;
+    border: 0px;
+}
+#form_name{
+    background-color: #4f5263;
+    color: aliceblue;
+    width: 100%;
+    padding: 2% 0% 5% 2% ;
+}
+
+#form_email{
+    background-color: #4f5263;
+    color: aliceblue;
+    width: 100%;
+    padding: 2% 0% 5% 2% ;
+}
+
+#form_message{
+    background-color: #4f5263;
+    color: aliceblue;
+    width: 100%;
+    padding: 2% 0% 15% 2% ;
 }
     </style>
 </head>
@@ -413,17 +438,18 @@ html{
           </div>
           <div>
             <i class="fa-solid fa-phone"></i>
-            <a href="">+91 78089 27193</a>
+            <a id="contact-phone" href="">+91 78089 27193</a>
           </div>
         </div>
      </div>
 
 
      <div class="contact-right">
-      <form action="">
-        <input type="text" placeholder="Your Name" required="required">
-        <input type="text" placeholder="Your Email" required="required">
-        <input type="text" placeholder="Message" required="required">
+      <h2 style="margin-bottom: -2%;">Message Me</h2>
+      <form  class="form" action="">
+        <input id="form_name" type="text" placeholder="Your Name" required="required">
+        <input id="form_email" type="text" placeholder="Your Email" required="required">
+        <input id="form_message" type="text" placeholder="Message" required="required">
       </form>
     </div>
     </div>
@@ -436,6 +462,11 @@ html{
         <img id="github-top-langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AakashGaurab&layout=compact" alt="">
         <img id="github-stats-card" src="https://github-readme-stats.vercel.app/api?username=AakashGaurab&show_icons=true" alt="">
     </div>
+
+    <div class="react-activity-calendar">
+      
+  </div>
+  
 </body>
 
 
@@ -446,6 +477,10 @@ html{
 <script
     src="https://kit.fontawesome.com/24c494a6b6.js"crossorigin="anonymous"></script>
 <script>
+
+GitHubCalendar(".react-activity-calendar", "AakashGaurab", { responsive: true });
+
+
 var typed = new Typed(".typing", {
     strings: ["Frontend Developer", "Backend Developer", "Full Stack Developer"],
     typeSpeed: 100,

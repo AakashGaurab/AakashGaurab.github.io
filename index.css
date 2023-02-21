@@ -142,8 +142,6 @@ html{
 }
 .contact-right form{
     width: 100%;
-    border: 0;
-    outline: none;
     background: #262626;
     padding: 15px;
     margin: 15px 0;
@@ -154,4 +152,31 @@ html{
 
 .awai{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form input{
+    margin: 3% 0%;
+    border: 0px;
+}
+#form_name{
+    background-color: #4f5263;
+    color: aliceblue;
+    width: 100%;
+    padding: 2% 0% 5% 2% ;
+}
+
+#form_email{
+    background-color: #4f5263;
+    color: aliceblue;
+    width: 100%;
+    padding: 2% 0% 5% 2% ;
+}
+
+#form_message{
+    background-color: #4f5263;
+    color: aliceblue;
+    width: 100%;
+    padding: 2% 0% 15% 2% ;
 }
