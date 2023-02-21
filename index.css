@@ -9,20 +9,32 @@ body a{
   
 }
 
+html{
+    scroll-behavior:smooth;
+ }
+
 #nav-menu{
     width: 90%;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid black;
+    position: sticky;
 }
 #nav-menu>div:nth-child(2){
     width: 40%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
+
+.resume-button-2{
+    font-size: large;
+    font-weight: bold;
+    padding: 3%;
+    border-radius: 5px;
+
+}
 #home{
     width: 90%;
     margin: auto;
@@ -52,8 +64,12 @@ body a{
 .about-section div:nth-child(2){
     text-align: center;
 }
-
-#skills{
+#skills>div:nth-child(1){
+    display:flex ;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#skills>div:nth-child(2){
     width: 90%;
     margin: auto;
     display: grid;
@@ -63,18 +79,31 @@ body a{
 .skills-card{
     text-align: center;
 }
-#projects{
+
+.skills-card:hover{
+    background-color:rgb(58, 56, 56);
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#projects>div:nth-child(2){
     width: 90%;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 5%;
 }
+
 #projects img{
     width: 100%;
 }
 .project-card{
+    padding: 5%;
     text-align: center;
+}
+.project-card:hover{
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: rgb(58, 56, 56);
 }
 .project-card div{
     display: flex;
@@ -93,11 +122,11 @@ body a{
 }
 
 
-.contact{
+#contact{
     width: 90%;
     margin: auto;
 }
-.contact div{
+#contact div{
     padding: 1%;
 }
 .contact_me{
@@ -110,4 +139,19 @@ body a{
     font-size:22px;
     font-weight:bold;
     color: rgb(238, 119, 119);
+}
+.contact-right form{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+.awai{
+    display: flex;
 }
