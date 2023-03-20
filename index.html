@@ -5,208 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aakash Gaurab-PortFolio</title>
-    
-    <!-- <link rel="stylesheet" href="index.css"> -->
-    <style>
-      body{
-    font-family: 'Poppins', sans-serif;
-    background-color: rgb(37, 39, 39);
-    color: rgb(240, 240, 247);
-}
-body a{
-  text-decoration: none;
-  color: #ff004f;
-  
-}
-
-html{
-    scroll-behavior:smooth;
- }
-
-#nav-menu{
-    width: 90%;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-}
-#nav-menu>div:nth-child(2){
-    width: 40%;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-
-.resume-button-2{
-    font-size: large;
-    font-weight: bold;
-    padding: 3%;
-    border-radius: 5px;
-
-}
-#home{
-    width: 90%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items:center ;
-}
-.home-img{
-    margin-top: 50px;
-}
-.typing{
-    color: rgb(57, 57, 187);
-    text-decoration: underline;
-}
-
-.backline {
-    width: 35%;
-    height: 1px;
-    background-color: #ff004f;
-}
-
-.about-section div:nth-child(1){
-   display: flex;
-   justify-content: space-evenly;
-   align-items: center;
-}
-.about-section div:nth-child(2){
-    text-align: center;
-}
-
-.gif>div{
-   width: 50%;
-   border:1px solid red;
-}
-#skills>div:nth-child(1){
-    display:flex ;
-    align-items: center;
-    justify-content: space-evenly;
-}
-#skills>div:nth-child(2){
-    width: 90%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    padding: 2%;
-}
-.skills-card{
-    text-align: center;
-}
-
-.skills-card:hover{
-    background-color:rgb(58, 56, 56);
-    border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-#projects>div:nth-child(2){
-    width: 90%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 5%;
-}
-
-#projects img{
-    width: 100%;
-}
-.project-card{
-    padding: 5%;
-    text-align: center;
-}
-.project-card:hover{
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    background-color: rgb(58, 56, 56);
-}
-.project-card div{
-    display: flex;
-    justify-content:space-around;
-}
-
-.skills_word{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.skills_word h3{
-    font-size:22px;
-    font-weight:bold;
-    color: rgb(238, 119, 119);
-}
-
-
-#contact{
-    width: 90%;
-    margin: auto;
-}
-#contact div{
-    padding: 1%;
-}
-.contact_me{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 10%;
-}
-.contact_me h3{
-    font-size:22px;
-    font-weight:bold;
-    color: rgb(238, 119, 119);
-}
-.contact-right form{
-    width: 100%;
-    background: #262626;
-    padding: 15px;
-    margin: 15px 0;
-    color: #fff;
-    font-size: 18px;
-    border-radius: 6px;
-}
-
-.awai{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.form input{
-    margin: 3% 0%;
-    border: 0px;
-}
-#form_name{
-    background-color: #4f5263;
-    color: aliceblue;
-    width: 100%;
-    padding: 2% 0% 5% 2% ;
-}
-
-#form_email{
-    background-color: #4f5263;
-    color: aliceblue;
-    width: 100%;
-    padding: 2% 0% 5% 2% ;
-}
-
-#form_message{
-    background-color: #4f5263;
-    color: aliceblue;
-    width: 100%;
-    padding: 2% 0% 15% 2% ;
-}
-    </style>
 </head>
-<link
-  rel="stylesheet"
-  href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"/>
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"/>
 
 <body>
 
    <!-- ***************** nav menu *********************** -->
     <div id="nav-menu">
         <div>
-            <h2>Port<span style="color:rgb(72, 72, 236)">folio</span></h2>
+            <h2>Aakash<span style="color:rgb(72, 72, 236)">Gaurab</span></h2>
         </div>
         <div>
             <a class="nav-link home" href="#home">Home</a>
@@ -214,7 +22,8 @@ html{
             <a class="nav-link skills" href="#skills">Skills</a>
             <a class="nav-link projects" href="#projects">Projects</a>
             <a class="nav-link contact" href="#contact">Contacts</a>
-            <a href="./Aakash Gaurab_Resume.pdf" class="nav-link resume" id="resume-button-1" download>Resume <i class="fa fa-download"></i></a>
+            <!-- <a  class="nav-link resume" href="./Aakash Gaurab_Resume.pdf" download>Resume</a> -->
+            <a  href="./Aakash Gaurab_Resume.pdf" target="_blank" download="pdf" id="resume-link-1" class="nav-link resume" >Resume</a>
         </div>
     </div>
 
@@ -227,7 +36,7 @@ html{
             <div id="user-detail-intro">
                 <h1>A <span class="typing"></span></h1>
             </div>
-            <a href="./Aakash Gaurab_Resume.pdf"  id="resume-button-2"  download>Resume <i class="fa fa-download"></i></a>
+            <button class="resume-button-2"><a href="./Aakash Gaurab_Resume.pdf" target="_blank" download="./Aakash Gaurab_Resume.pdf">Download Resume</a> <i class="fa fa-download" aria-hidden="true"></i></button>
         </div>
         
         <div>
@@ -323,16 +132,25 @@ html{
         <div class="project-card">
           <img src="./Belk.png" alt="">
           <h3 class="project-title">Quickest-seashore</h3>
-           <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, corporis.
-           </p>
-           <div>
-            <img src="https://chiranjeev-thapliyal.vercel.app/svg/nodejs.svg" alt="Skills Logo" class="skills-card-img">
-            <img src="https://chiranjeev-thapliyal.vercel.app/svg/mongodb.svg" alt="Skills Logo" class="skills-card-img">
-            <img src="https://chiranjeev-thapliyal.vercel.app/svg/html-5.svg" alt="Skills Logo" class="skills-card-img">
-           </div>
-           <div>
-              <a href="https://github.com/AakashGaurab/quickest-seashore-9367" class="project-github-link" target="_blank">GitHub link </a>
-             <a href="https://mellow-manatee-be0e70.netlify.app/" class="project-deployed-link" target="_blank">Project Deployed Link</a>
+          <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, corporis.</p>
+
+
+           <div class="techStackImg">
+              <div>
+                <!-- <i class="fa-brands fa-html5  fa-2xl" style="color: #db1627;font-size:30px;"></i> -->
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968267.png" style="width:30%;" alt="">
+                <h5>HTML</h5>
+              </div>
+              <div>
+                <!-- <i class="fa-brands fa-css3-alt fa-bounce fa-2xl" style="color: #e81717;"></i> -->
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" style="width:30%;" alt="">
+                <h5>CSS</h5>
+              </div>
+              <div>
+                <!-- <i class="fa-brands fa-js fa-bounce fa-2xl" style="color: #df1111;"></i> -->
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" style="width:30%;" alt="">
+                <h5>Javascript</h5>
+              </div>
            </div>
          </div>
   
@@ -340,17 +158,25 @@ html{
          <div class="project-card">
           <img src="./Belk.png" alt="">
           <h3 class="project-title">Quickest-seashore</h3>
-           <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, corporis.
-           </p>
-           <div>
-            <p>HTML</p>
-            <p>CSS</p>
-            <p>Nodejs</p>
-            <p>MongoDB</p>
-           </div>
-           <div>
-              <a href="https://github.com/AakashGaurab/quickest-seashore-9367" class="project-github-link" target="_blank">GitHub link </a>
-             <a href="https://mellow-manatee-be0e70.netlify.app/" class="project-deployed-link" target="_blank" >Project Deployed Link</a>
+          <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, corporis.</p>
+
+
+           <div class="techStackImg">
+              <div>
+                <!-- <i class="fa-brands fa-html5  fa-2xl" style="color: #db1627;font-size:30px;"></i> -->
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968267.png" style="width:30%;" alt="">
+                <h5>HTML</h5>
+              </div>
+              <div>
+                <!-- <i class="fa-brands fa-css3-alt fa-bounce fa-2xl" style="color: #e81717;"></i> -->
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" style="width:30%;" alt="">
+                <h5>CSS</h5>
+              </div>
+              <div>
+                <!-- <i class="fa-brands fa-js fa-bounce fa-2xl" style="color: #df1111;"></i> -->
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" style="width:30%;" alt="">
+                <h5>Javascript</h5>
+              </div>
            </div>
          </div>
   
@@ -359,59 +185,79 @@ html{
          <div class="project-card">
           <img src="./Belk.png" alt="">
           <h3 class="project-title">Quickest-seashore</h3>
-           <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, corporis.
-           </p>
-           <ul class="project-tech-stack">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>NodeJS</li>
-              <li>MongoDB</li>
-              <li>Express</li>
-           </ul>
-           <div>
-              <a href="https://github.com/AakashGaurab/quickest-seashore-9367" class="project-github-link" target="_blank">GitHub link </a>
-             <a href="https://mellow-manatee-be0e70.netlify.app/" class="project-deployed-link" target="_blank" >Project Deployed Link</a>
+          <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, corporis.</p>
+
+
+           <div class="techStackImg">
+              <div>
+                <!-- <i class="fa-brands fa-html5  fa-2xl" style="color: #db1627;font-size:30px;"></i> -->
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968267.png" style="width:30%;" alt="">
+                <h5>HTML</h5>
+              </div>
+              <div>
+                <!-- <i class="fa-brands fa-css3-alt fa-bounce fa-2xl" style="color: #e81717;"></i> -->
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" style="width:30%;" alt="">
+                <h5>CSS</h5>
+              </div>
+              <div>
+                <!-- <i class="fa-brands fa-js fa-bounce fa-2xl" style="color: #df1111;"></i> -->
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" style="width:30%;" alt="">
+                <h5>Javascript</h5>
+              </div>
            </div>
          </div>
   
   
          <div class="project-card">
-          <img src="./JEFIT clone.png" alt="">
+          <img src="./Belk.png" alt="">
           <h3 class="project-title">Quickest-seashore</h3>
-           <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, corporis.
-           </p>
-           <ul class="project-tech-stack">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>NodeJS</li>
-              <li>MongoDB</li>
-              <li>Express</li>
-           </ul>
-           <div>
-              <a href="https://github.com/AakashGaurab/quickest-seashore-9367" class="project-github-link" target="_blank">GitHub link </a>
-             <a href="https://glittering-cannoli-a9331b.netlify.app/index.html" target="_blank" class="project-deployed-link" >Project Deployed Link</a>
+          <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, corporis.</p>
+
+
+           <div class="techStackImg">
+              <div>
+                <!-- <i class="fa-brands fa-html5  fa-2xl" style="color: #db1627;font-size:30px;"></i> -->
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968267.png" style="width:30%;" alt="">
+                <h5>HTML</h5>
+              </div>
+              <div>
+                <!-- <i class="fa-brands fa-css3-alt fa-bounce fa-2xl" style="color: #e81717;"></i> -->
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" style="width:30%;" alt="">
+                <h5>CSS</h5>
+              </div>
+              <div>
+                <!-- <i class="fa-brands fa-js fa-bounce fa-2xl" style="color: #df1111;"></i> -->
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" style="width:30%;" alt="">
+                <h5>Javascript</h5>
+              </div>
            </div>
          </div>
   
   
          <div class="project-card">
-          <img src="./JEFIT clone.png" alt="">
+          <img src="./Belk.png" alt="">
           <h3 class="project-title">Quickest-seashore</h3>
-           <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, corporis.
-           </p>
-           <ul class="project-tech-stack">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>NodeJS</li>
-              <li>MongoDB</li>
-              <li>Express</li>
-           </ul>
-           <div>
-              <a href="https://github.com/AakashGaurab/quickest-seashore-9367" class="project-github-link" target="_blank">GitHub link </a>
-             <a href="https://glittering-cannoli-a9331b.netlify.app/index.html" target="_blank" class="project-deployed-link" >Project Deployed Link</a>
+          <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, corporis.</p>
+
+
+           <div class="techStackImg">
+              <div>
+                <!-- <i class="fa-brands fa-html5  fa-2xl" style="color: #db1627;font-size:30px;"></i> -->
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968267.png" style="width:30%;" alt="">
+                <h5>HTML</h5>
+              </div>
+              <div>
+                <!-- <i class="fa-brands fa-css3-alt fa-bounce fa-2xl" style="color: #e81717;"></i> -->
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" style="width:30%;" alt="">
+                <h5>CSS</h5>
+              </div>
+              <div>
+                <!-- <i class="fa-brands fa-js fa-bounce fa-2xl" style="color: #df1111;"></i> -->
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" style="width:30%;" alt="">
+                <h5>Javascript</h5>
+              </div>
            </div>
          </div>
-       </div>
        
     </div>
 
@@ -463,7 +309,7 @@ html{
       
 
     <div class="git_status">
-        <img id="github-streak-stats" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=AakashGaurab">
+        <img id="github-streak-stats" src="https://github-readme-streak-stats.herokuapp.com?user=AakashGaurab" alt="">
         <img id="github-top-langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AakashGaurab&layout=compact" alt="">
         <img id="github-stats-card" src="https://github-readme-stats.vercel.app/api?username=AakashGaurab&show_icons=true" alt="">
     </div>
