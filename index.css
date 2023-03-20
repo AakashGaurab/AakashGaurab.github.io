@@ -24,6 +24,9 @@ html{
 #nav-menu>div:nth-child(2){
     width: 40%;
     display: flex;
+    font-size:large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
     justify-content: space-evenly;
 }
 
@@ -79,21 +82,21 @@ html{
     justify-content: space-evenly;
 }
 #skills>div:nth-child(2){
-    width: 90%;
+    width: 80%;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(4,1fr);
+    gap: 3%;
     padding: 2%;
 }
 .skills-card{
+    /* border: 1px dotted white; */
+    border-radius: 5px;
+    border: 3px ridge blue;
     text-align: center;
+    transition: all .45s ease;
 }
 
-.skills-card:hover{
-    background-color:rgb(58, 56, 56);
-    border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
 
 .skills_word{
     display: flex;
@@ -106,6 +109,14 @@ html{
     color: rgb(238, 119, 119);
 }
 
+
+.skills-card:hover{
+    transform: translateY(-8px);
+    cursor: pointer;
+    background-color:rgb(58, 56, 56);
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 
 
 /* ******************************************projects section styling******************** */
@@ -210,4 +221,20 @@ html{
     color: aliceblue;
     width: 100%;
     padding: 2% 0% 15% 2% ;
+}
+
+
+
+/* **************************git styling section******************** */
+
+
+.git_status{
+    width: 70%;
+    display: grid;
+    gap: 3%;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.git_status img{
+    width: 100%;
 }
