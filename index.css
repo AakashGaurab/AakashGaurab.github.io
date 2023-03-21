@@ -145,12 +145,12 @@ html{
     justify-content:space-around;
 }
 
-.techStackImg{
+.project-tech-stack{
     display: grid;
     grid-template-columns: repeat(3,1fr);
 }
 
-.techStackImg div{
+.project-tech-stack div{
     margin-top: 5px;
     display: flex;
     flex-direction: column;
@@ -158,7 +158,7 @@ html{
     justify-content: center;
 }
 
-.techStackImg img{
+.project-tech-stack img{
     width: 100%;
 }
 
