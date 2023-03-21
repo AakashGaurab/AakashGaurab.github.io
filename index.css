@@ -65,12 +65,12 @@ html{
 
 
     /* ********************************** about section styling********************* */
-.about-section div:nth-child(1){
+#about div:nth-child(1){
    display: flex;
    justify-content: space-evenly;
    align-items: center;
 }
-.about-section div:nth-child(2){
+#about div:nth-child(2){
     text-align: center;
 }
 
