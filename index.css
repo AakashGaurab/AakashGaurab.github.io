@@ -49,6 +49,11 @@ html{
     justify-content: space-between;
     align-items:center ;
 }
+
+#home>div{
+    width: 50%;
+}
+
 .home-img{
     width: 100%;
     margin-top: 50px;
