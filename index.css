@@ -48,15 +48,18 @@ html{
     display: flex;
     justify-content: space-between;
     align-items:center ;
+    /* display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1%; */
 }
 
 #home>div{
     width: 50%;
 }
-
 .home-img{
     width: 100%;
     margin-top: 50px;
+    border-radius: 3%;
 }
 .typing{
     color: rgb(57, 57, 187);
@@ -124,48 +127,67 @@ html{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.skills-card-name{
+    color: #fff;
+}
+
+
+
 
 /* ******************************************projects section styling******************** */
-#projects>div:nth-child(2){
+
+
+.container{
     width: 90%;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
     gap: 5%;
+    grid-template-columns: repeat(2,1fr);
 }
 
-#projects img{
-    width: 100%;
-}
 .project-card{
-    padding: 5%;
+    padding-top: 5%;
     text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 25px;
+    transition: all .45s ease;
 }
+
 .project-card:hover{
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    background-color: rgb(58, 56, 56);
-}
-.project-card div{
-    display: flex;
-    justify-content:space-around;
+    transform: translateY(-8px);
+    cursor: pointer;
 }
 
-.project-tech-stack{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
+.project-card img{
+    width: 50%;
 }
 
-.project-tech-stack div{
-    margin-top: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
+.project-github-link {
+    margin-right: 40px;
+    text-decoration: none;
+    font-size: 20px;
+    background-color: rgb(104, 33, 170);
+    padding:10px 30px;
+    border-radius: 25px;
+    color: black;
+
+
+}
+.project-github-link:hover{
+    cursor: pointer;
 }
 
-.project-tech-stack img{
-    width: 100%;
+.project-deployed-link {
+    text-decoration: none;
+    font-size: 20px;
+    background-color: azure;
+    padding:10px 30px;
+    border-radius: 25px;
+
+}
+.project-deployed-link:hover{
+    cursor: pointer;
 }
 
 /* **************************Contact section styling************************ */
@@ -253,17 +275,26 @@ html{
 
 
 @media all and (min-width:100px) and (max-width:400px) {
+    /* ********************************************************** */
     #skills>div:nth-child(2){
         width: 80%;
         margin: auto;
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: 1fr;
         gap: 3%;
         padding: 2%;
     }
 
-    .contact{
-        font-size: 15px;
+
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 80%;
+        margin-bottom: 80%;
+    }
+
+    .contact1{
+        font-size:10px;
     }
 
 
@@ -277,7 +308,7 @@ html{
     }
 }
 
-@media all and (min-width:401px) and (max-width:900px){
+@media all and (min-width:401px) and (max-width:1200px){
     #skills>div:nth-child(2){
         width: 80%;
         margin: auto;
@@ -287,8 +318,15 @@ html{
         padding: 2%;
     }
      
-    .contact{
-        font-size: 20px;
+
+    .container{
+        margin-bottom: 40%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .contact1{
+        font-size: 15px;
     }
 
     #nav-menu>div:nth-child(2){
