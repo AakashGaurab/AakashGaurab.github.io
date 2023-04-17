@@ -346,19 +346,19 @@ html{
     }
 
 
-    /* #nav-menu>div:nth-child(2){
+    #nav-menu>div:nth-child(2){
         width: 40%;
         display: none;
         font-size:large;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 500;
         justify-content: space-evenly;
-    } */
+    }
 
 
 
     /* ********************************************** */
-    .links {
+     .links {
 		bottom: 0;
 	}
 	 .icon-burger {
@@ -401,13 +401,13 @@ html{
         font-size: 15px;
     }
 
-    /* #nav-menu>div:nth-child(2){
+    #nav-menu>div:nth-child(2){
         width: 40%;
         display: none;
         font-size:large;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 500;
         justify-content: space-evenly;
-    } */
+    }
     
 }
