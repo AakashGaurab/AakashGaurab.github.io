@@ -54,7 +54,7 @@ html{
 }
 
 #home>div{
-    width: 50%;
+    width: 45%;
 }
 .home-img{
     width: 100%;
@@ -129,6 +129,10 @@ html{
 
 .skills-card-name{
     color: #fff;
+}
+
+.font{
+    font-size: 100px;
 }
 
 
@@ -276,6 +280,21 @@ html{
 
 @media all and (min-width:100px) and (max-width:400px) {
     /* ********************************************************** */
+
+
+    #home h1{
+        font-size:large;
+    }
+
+    #home>div{
+        width: 45%;
+    }
+
+    #resume-button-2{
+        font-size: medium;
+        padding: 1%;
+    }
+
     #skills>div:nth-child(2){
         width: 80%;
         margin: auto;
@@ -283,6 +302,13 @@ html{
         grid-template-columns: 1fr;
         gap: 3%;
         padding: 2%;
+    }
+
+
+
+    .font{
+        margin-top: 5%;
+        font-size: 50px;
     }
 
 
@@ -318,6 +344,10 @@ html{
         padding: 2%;
     }
      
+    .font{
+        margin-top: 2%;
+        font-size: 80px;
+    }
 
     .container{
         margin-bottom: 40%;
