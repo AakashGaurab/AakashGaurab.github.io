@@ -40,6 +40,29 @@ html{
 }
 
 
+/* **************************************** */
+
+.icon-burger {
+	display: none;
+	position: absolute;
+	right: 5%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.icon-burger .line {
+	width: 30px;
+	height: 5px;
+	background-color: #fff;
+	margin: 5px;
+	border-radius: 3px;
+	transition: all .3s ease-in-out;
+}
+
+
+/* ************************************** */
+
+
+
 
                 /* *********************** home section styling************************* */
 #home{
@@ -292,7 +315,6 @@ html{
 
     #resume-button-2{
         font-size: medium;
-        padding: 1%;
     }
 
     #skills>div:nth-child(2){
@@ -324,14 +346,34 @@ html{
     }
 
 
-    #nav-menu>div:nth-child(2){
+    /* #nav-menu>div:nth-child(2){
         width: 40%;
         display: none;
         font-size:large;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 500;
         justify-content: space-evenly;
-    }
+    } */
+
+
+
+    /* ********************************************** */
+    .links {
+		bottom: 0;
+	}
+	 .icon-burger {
+		display: block;
+	}
+	.icon-burger .line:nth-child(1) {
+		transform: translateY(10px) rotate(225deg);
+	}
+	.icon-burger .line:nth-child(3) {
+		transform: translateY(-10px) rotate(-225deg);
+	}
+	.icon-burger .line:nth-child(2) {
+		opacity: 0;
+	}
+    /* ********************************************* */
 }
 
 @media all and (min-width:401px) and (max-width:1200px){
@@ -359,13 +401,13 @@ html{
         font-size: 15px;
     }
 
-    #nav-menu>div:nth-child(2){
+    /* #nav-menu>div:nth-child(2){
         width: 40%;
         display: none;
         font-size:large;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 500;
         justify-content: space-evenly;
-    }
+    } */
     
 }
