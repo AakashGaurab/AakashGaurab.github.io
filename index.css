@@ -1,3 +1,7 @@
+:root{
+    --bs-body-bg:rgb(37, 39, 39);
+}
+
 body{
     font-family:Arial, Helvetica, sans-serif;
     background-color: rgb(37, 39, 39);
@@ -37,6 +41,11 @@ html{
     padding: 3%;
     border-radius: 5px;
 
+}
+
+#resume-button-1{
+    border: none;
+    background-color:aliceblue;
 }
 
 
@@ -304,6 +313,13 @@ html{
 @media all and (min-width:100px) and (max-width:400px) {
     /* ********************************************************** */
 
+    .git_status{
+        display: flex;
+        flex-direction: column;
+    }
+    .git_status>img{
+        width:150%;
+    }
 
     #home h1{
         font-size:large;
