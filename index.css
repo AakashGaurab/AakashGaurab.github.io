@@ -313,9 +313,16 @@ html{
 @media all and (min-width:100px) and (max-width:400px) {
     /* ********************************************************** */
 
+    #home>div:nth-child(1){
+        margin-top: 30%;
+        /* display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1%; */
+    }
     .git_status{
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3%;
     }
     .git_status>img{
         width:150%;
