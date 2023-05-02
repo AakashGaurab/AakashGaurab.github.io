@@ -313,6 +313,10 @@ html{
 @media all and (min-width:100px) and (max-width:400px) {
     /* ********************************************************** */
 
+    .react-activity-calendar{
+        margin-top: 10%;
+        width: 100%;
+    }
     #home>div:nth-child(1){
         margin-top: 30%;
         /* display: grid;
