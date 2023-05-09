@@ -134,7 +134,7 @@ html{
 .skills-card{
     /* border: 1px dotted white; */
     border-radius: 5px;
-    border: 3px ridge blue;
+    border: 3px ridge rgb(71, 71, 201);
     text-align: center;
     transition: all .45s ease;
 }
@@ -185,7 +185,7 @@ html{
 .project-card{
     padding-top: 5%;
     text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(66, 66, 236, 0.24) 0px 3px 8px;
     border-radius: 25px;
     transition: all .45s ease;
 }
