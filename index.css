@@ -45,7 +45,8 @@ html{
 
 #resume-button-1{
     border: none;
-    background-color:aliceblue;
+    background-color:rgb(181, 221, 86);
+    border-radius: 15px;
 }
 
 
