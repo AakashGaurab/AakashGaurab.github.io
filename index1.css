@@ -1,0 +1,267 @@
+:root{
+    --bs-body-bg:rgb(37, 39, 39);
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: rgb(37, 39, 39);
+    color: rgb(240, 240, 247);
+}
+body a{
+  text-decoration: none;
+  color: #ff004f;
+  
+}
+
+html{
+    scroll-behavior:smooth;
+ }
+
+
+
+ #resume-button-2{
+    font-size: large;
+    font-weight: bold;
+    padding: 3%;
+    border-radius: 5px;
+
+}
+
+#resume-button-1{
+    border: none;
+    background-color:rgb(181, 221, 86);
+    border-radius: 15px;
+}
+
+
+
+
+/* ****************************************************************************************************** */
+
+
+#home{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items:center ;
+}
+
+#home>div{
+    width: 45%;
+}
+.home-img{
+    width: 100%;
+    margin-top: 50px;
+    border-radius: 3%;
+}
+.typing{
+    color: rgb(57, 57, 187);
+    text-decoration: underline;
+}
+
+.backline {
+    width: 35%;
+    height: 1px;
+    background-color: #ff004f;
+}
+
+/* **************************************************************************************************************** */
+
+#skills>div:nth-child(1){
+    display:flex ;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#skills>div:nth-child(2){
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 3%;
+    padding: 2%;
+}
+.skills-card{
+    /* border: 1px dotted white; */
+    border-radius: 5px;
+    border: 3px ridge rgb(71, 71, 201);
+    text-align: center;
+    transition: all .45s ease;
+}
+
+
+.skills_word{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.skills_word h3{
+    font-size:22px;
+    font-weight:bold;
+    color: rgb(238, 119, 119);
+}
+
+
+.skills-card:hover{
+    transform: translateY(-8px);
+    cursor: pointer;
+    background-color:rgb(58, 56, 56);
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.skills-card-name{
+    color: #fff;
+}
+
+.font{
+    font-size: 100px;
+}
+
+
+
+/* ****************************************************************************************************** */
+#stats_heading {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+ }
+ #stats_heading  h3{
+     font-size: 3rem;
+     font-weight: 800;
+  }
+ 
+ #git-stats {
+     width: 100%;
+     height: auto;
+     display: flex;
+     flex-direction: column;
+     margin: auto;
+     align-items: center;
+     margin-top: 10vh;
+     margin-bottom: 5vh;
+     padding: 10px 10%;
+ }
+ #git-stats>div:nth-child(2) {
+     margin-top: 60px;
+ }
+ #top_row {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ .stats_card>img {
+     width: 100%;
+     margin: auto;
+ }
+ #top_row div {
+     padding: 10px 1%;
+ }
+ 
+ #git-stats-calender>img {
+     height: 20vh;
+     width: 150%;
+     margin: auto;
+ }
+
+/* ******************************************************************************************* */
+
+
+.end{
+    padding: 20px 15%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    color: rgb(246, 249, 252);
+    background: rgb(2, 61, 61)
+}
+.last-text p{
+    color: #fff;
+    font-size: 14px;
+}
+.top i{
+    font-size: 30px;
+    font-weight: 1000;
+    padding: 10px;
+    border-radius: 8px;
+    color: #fff;
+    background: rgb(2, 61, 61);
+}
+
+
+
+
+
+@media all and (min-width:100px) and (max-width:400px) {
+    .react-activity-calendar{
+        margin-top: 10%;
+        width: 100%;
+    }
+    #home>div:nth-child(1){
+        margin-top: 30%;
+        
+    }
+    .git_status{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3%;
+    }
+    .git_status>img{
+        width:150%;
+    }
+
+    #home h1{
+        font-size:large;
+    }
+
+    #home>div{
+        width: 45%;
+    }
+
+    #resume-button-2{
+        font-size: medium;
+    }
+
+    #skills>div:nth-child(2){
+        width: 80%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap:0%;
+    }
+
+
+
+    .font{
+        margin-top: 5%;
+        font-size: 50px;
+    }
+
+    #top_row {
+        flex-direction: column;
+    }
+
+    .contact1{
+        font-size:20px;
+    }
+
+}
+
+
+@media all and (min-width:401px) and (max-width:750px) {
+    #top_row {
+        flex-direction: column;
+    }
+    #git-stats>div:nth-child(3) {
+        margin-top: 10px;
+        padding: 10px 0%;
+    }
+    #git-stats-calender>img {
+        height: 15vh;
+    }
+}
+
+
