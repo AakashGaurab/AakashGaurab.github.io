@@ -68,6 +68,22 @@ html{
 
 /* **************************************************************************************************************** */
 
+#about div:nth-child(1){
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+ }
+ #about div:nth-child(2){
+     text-align: center;
+ }
+
+
+
+ /* ********************************************************************************************************** */
+
+
+
+
 #skills>div:nth-child(1){
     display:flex ;
     align-items: center;
