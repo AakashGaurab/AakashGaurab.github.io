@@ -1,0 +1,46 @@
+.aboutMeContainer {
+  width: 80%;
+  margin: auto;
+  margin-top: 5%;
+}
+
+.descriptionContainer {
+  width: 60%;
+}
+
+.description1 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #d9d2d2;
+}
+
+.description2 {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #d9d2d2;
+}
+
+.blueText {
+  color: rgb(72, 72, 236);
+}
+
+.aboutmeContainer1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (width<500px) {
+  .aboutmeContainer1 {
+    flex-direction: column;
+  }
+  .descriptionContainer {
+    width: 100%;
+  }
+  .imageContainer {
+    display: flex;
+    justify-content: center;
+  }
+  .aboutMeContainer {
+    margin-top: 20%;
+  }
+}

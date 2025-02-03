@@ -1,0 +1,61 @@
+.introContainer {
+  width: 90%;
+  height: calc(90vh + 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: 20px;
+  position: relative;
+}
+
+.nameIntroContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nameIntro {
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgb(72, 72, 236);
+}
+
+.helloText {
+  color: rgb(72, 72, 236);
+}
+
+.wavingHand {
+  display: block;
+}
+
+.smallDesc {
+  line-height: 1.6;
+  font-weight: 400;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
+.AvatarImage {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.avatarImageContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.downChevronContainer{
+  width: fit-content;
+margin: auto;
+}
+
+@media screen and (width>=500px) {
+  .introContainer {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
