@@ -37,6 +37,7 @@ export const Navbar = ({ showDropDown, handleShowDropDown }) => {
               onClick={() => {
                 handleOptionsClick(options);
               }}
+              className={styles.options}
             >
               {options}
             </div>

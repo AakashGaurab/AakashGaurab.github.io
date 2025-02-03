@@ -3,8 +3,7 @@ export const navbarOptions = [
   "About Me",
   "Skills",
   "Projects",
-  "Contact",
-  "Chat with Bot",
+  "Contact"
 ];
 export const RESUME_LINK =
   "https://drive.google.com/file/d/1CTHL-o0kiE9N0pnVgZHDOPtqI5p3PUTf/view?usp=sharing";
