@@ -88,7 +88,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-@media screen and (width>=500px) {
+@media screen and (width>=550px) {
   #smallScreenNavbar {
     display: none;
   }
@@ -99,7 +99,7 @@
     display: none;
   }
 }
-@media screen and (width<500px) {
+@media screen and (width<550px) {
   #largeScreenNavbar {
     display: none;
   }

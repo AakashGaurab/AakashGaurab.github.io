@@ -7,13 +7,13 @@
   color: rgb(72, 72, 236);
 }
 
-@media screen and (width>=500px) {
+@media screen and (width>=550px) {
   .nameText {
     display: block;
   }
 }
 
-@media screen and (width<500px) {
+@media screen and (width<550px) {
   .nameText {
     display: none;
   }

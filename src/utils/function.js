@@ -28,3 +28,12 @@ export const parseBoldText = (text) => {
     return <span key={index}>{part}</span>;
   });
 };
+
+export const handleOptionsClick = (option) => {
+  if (option === "Chat with Bot") {
+    if (window?.botpress?.open) {
+      window.botpress.open();
+    }
+    return;
+  }
+};

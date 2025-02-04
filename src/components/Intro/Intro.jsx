@@ -7,7 +7,7 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 export const Intro = () => {
   return (
     <>
-      <div className={styles.introContainer}>
+      <div className={styles.introContainer} id="home">
         <div className={styles.introContent}>
           <div className={styles.nameIntroContainer}>
             <h1 className={styles.helloText}>Hello!</h1>

@@ -9,6 +9,7 @@ import { About } from "@/components/AboutMe/AboutMe";
 import Switch from "@/components/Switch/Switch";
 import Skills from "@/components/Skills/Skills";
 import Contact from "@/components/Contact/Contact";
+import { handleOptionsClick } from "@/utils/function";
 
 export default function Home() {
   const [showDropDown, setShowDropDown] = useState(false);
@@ -27,7 +28,16 @@ export default function Home() {
         </div>
         <div className={styles.dropDownNavbarOptions}>
           {navbarOptions.map((options, id) => {
-            return <div key={id}>{options}</div>;
+            return (
+              <div
+                key={id}
+                onClick={() => {
+                  handleOptionsClick(options);
+                }}
+              >
+                {options}
+              </div>
+            );
           })}
         </div>
       </div>
