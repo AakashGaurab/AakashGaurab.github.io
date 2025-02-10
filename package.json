@@ -3,10 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "server": "nodemon run server.js",
     "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next build && nodemon run server.js",
+    "start": "next build && next start",
     "lint": "next lint"
   },
   "dependencies": {

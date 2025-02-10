@@ -28,8 +28,8 @@ export default function RootLayout({ children }) {
 
         <GoogleAnalytics gaId="G-1RZS6RXSMX" />
 
-        <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
-        <script src="https://files.bpcontent.cloud/2025/02/03/09/20250203090804-02IK6G2O.js"></script>
+        {/* <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+        <script src="https://files.bpcontent.cloud/2025/02/03/09/20250203090804-02IK6G2O.js"></script> */}
       </body>
     </html>
   );

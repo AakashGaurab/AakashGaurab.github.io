@@ -4,6 +4,7 @@ import ResetImage from "../../../public/assets/svg/reset.svg";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import axios from "axios";
+import runConversation from "../../../controller/geminiResponse";
 
 export const ChatArea = ({ handleCloseChatArea }) => {
   const chatAreaRef = useRef(null);
@@ -30,12 +31,12 @@ export const ChatArea = ({ handleCloseChatArea }) => {
     setIsMessageGenerating(true); // Set loading state
     setChatMessage(""); // Reset the chat message
     try {
-      const response = await axios.get("/ai/generateResponse", {
+      const response = await runConversation({
         message: chatMessage,
       });
 
       if (response?.status === 200) {
-        const data = response?.data?.message;
+        const data = response?.message;
 
         if (!data) {
           setMessages((prevMessages) => [

@@ -167,12 +167,12 @@ const model = genAI.getGenerativeModel({
   },
 });
 
-async function runConversation(req, res) {
+async function runConversation(params) {
   console.log("Running conversation");
 
   try {
     const chat = model.startChat();
-    const prompt = req.body?.message || req.query?.message || "Hello";
+    const prompt = params?.message || "Hello";
 
     // Send the message to the model.
     const result = await chat.sendMessage(prompt);
@@ -205,14 +205,17 @@ async function runConversation(req, res) {
 
       // Log the text response.
       console.log("Response generated and sent.");
-      res.json({ message: result2.response.text() });
+      return { message: result2.response.text(), status: 200 };
     } else {
       console.log("No function calls found in the response.");
-      res.json({ message: result?.response?.text() || "No response." });
+      return {
+        message: result?.response?.text() || "No response.",
+        status: 200,
+      };
     }
   } catch (error) {
     console.log("Error generating response", error);
-    res.json({ error: "Some error occured." });
+    return { error: "Some error occured.", status: 500 };
   }
 }
 
