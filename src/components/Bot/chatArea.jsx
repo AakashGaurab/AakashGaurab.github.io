@@ -39,7 +39,6 @@ export const ChatArea = ({ handleCloseChatArea }) => {
         isLoading: true,
       },
     ]);
-    return;
     try {
       const response = await runConversation({
         message: chatMessage,
