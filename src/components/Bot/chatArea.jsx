@@ -5,6 +5,8 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import runConversation from "../../../controller/geminiResponse";
+import { BubbleLoader } from "../loader/BubbleLoader/bubbleLoader";
+import { Bouncy } from "../loader/BouncyLoader/bouncy";
 
 export const ChatArea = ({ handleCloseChatArea }) => {
   const chatAreaRef = useRef(null);
@@ -30,6 +32,14 @@ export const ChatArea = ({ handleCloseChatArea }) => {
   const generateAIResponse = async () => {
     setIsMessageGenerating(true); // Set loading state
     setChatMessage(""); // Reset the chat message
+    setMessages((prevMessages) => [
+      ...prevMessages,
+      {
+        text: "",
+        isLoading: true,
+      },
+    ]);
+    return;
     try {
       const response = await runConversation({
         message: chatMessage,
@@ -39,6 +49,11 @@ export const ChatArea = ({ handleCloseChatArea }) => {
         const data = response?.message;
 
         if (!data) {
+          setMessages((prevMessages) => {
+            const newMessages = [...prevMessages];
+            newMessages.pop();
+            return newMessages;
+          });
           setMessages((prevMessages) => [
             ...prevMessages,
             {
@@ -47,12 +62,22 @@ export const ChatArea = ({ handleCloseChatArea }) => {
             },
           ]);
         } else {
+          setMessages((prevMessages) => {
+            const newMessages = [...prevMessages];
+            newMessages.pop();
+            return newMessages;
+          });
           setMessages((prevMessages) => [
             ...prevMessages,
             { text: data, isUser: false },
           ]);
         }
       } else {
+        setMessages((prevMessages) => {
+          const newMessages = [...prevMessages];
+          newMessages.pop();
+          return newMessages;
+        });
         setMessages((prevMessages) => [
           ...prevMessages,
           {
@@ -120,15 +145,21 @@ export const ChatArea = ({ handleCloseChatArea }) => {
           >
             <div className={styles.messageContainer2}>
               {!msg?.isUser && <span className={styles.botChatLogo}>A</span>}
-              <p
-                className={`${styles.textContainer} ${
-                  msg?.isUser
-                    ? styles.userTextContainer
-                    : styles.botTextContainer
-                }`}
-              >
-                {msg.text}
-              </p>
+              {msg?.isLoading ? (
+                <div className={styles.loaderContainer}>
+                  <Bouncy />
+                </div>
+              ) : (
+                <p
+                  className={`${styles.textContainer} ${
+                    msg?.isUser
+                      ? styles.userTextContainer
+                      : styles.botTextContainer
+                  }`}
+                >
+                  {msg.text}
+                </p>
+              )}
             </div>
           </div>
         ))}
