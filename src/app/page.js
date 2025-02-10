@@ -10,6 +10,7 @@ import Switch from "@/components/Switch/Switch";
 import Skills from "@/components/Skills/Skills";
 import Contact from "@/components/Contact/Contact";
 import { handleOptionsClick } from "@/utils/function";
+import { Bot } from "@/components/Bot/bot";
 
 export default function Home() {
   const [showDropDown, setShowDropDown] = useState(false);
@@ -50,6 +51,7 @@ export default function Home() {
       <Skills />
       <About />
       <Contact />
+      <Bot />
     </div>
   );
 }
