@@ -88,20 +88,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20' # Specify your Node.js version
-
-      - name: Install dependencies
-        run: npm install
-
-      # Add a build step if your deployment requires it
-      - name: Build project (optional)
-        run: npm run build
-
-      - name: Deploy using npm run server
-        run: npm run server # Your custom deployment command
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

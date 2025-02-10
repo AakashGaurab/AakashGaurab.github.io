@@ -51,7 +51,7 @@ export default function Home() {
       <Skills />
       <About />
       <Contact />
-      <Bot />
+      {/* <Bot /> */}
     </div>
   );
 }
