@@ -6,7 +6,7 @@
     "server": "nodemon run server.js",
     "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "NODE_ENV=production nodemon run server.js",
+    "start": "nodemon run server.js",
     "lint": "next lint"
   },
   "dependencies": {
