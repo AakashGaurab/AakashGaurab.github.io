@@ -142,7 +142,7 @@ const functions = {
 };
 
 console.log(process.env,process)
-const genAI = new GoogleGenerativeAI(`${process.env.MY_SECRET_API_KEY}`);
+const genAI = new GoogleGenerativeAI(`${process.env.NEXT_PUBLIC_MY_SECRET_API_KEY}`);
 
 const model = genAI.getGenerativeModel({
   model: "gemini-1.5-flash",
