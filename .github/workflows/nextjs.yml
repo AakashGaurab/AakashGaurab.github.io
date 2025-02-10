@@ -90,7 +90,7 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: appleboy/ssh-action@master
+        uses: actions/deploy-pages@v4
         with: 
           script: |
             cd ./
