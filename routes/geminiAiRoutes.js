@@ -6,6 +6,6 @@ const app = express();
 app.use(express.json());
 
 
-app.post("/generateResponse", runConversation);
+app.get("/generateResponse", runConversation);
 
 module.exports = geminiAiRoutes;

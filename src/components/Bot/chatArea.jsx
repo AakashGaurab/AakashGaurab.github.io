@@ -30,7 +30,7 @@ export const ChatArea = ({ handleCloseChatArea }) => {
     setIsMessageGenerating(true); // Set loading state
     setChatMessage(""); // Reset the chat message
     try {
-      const response = await axios.post("/ai/generateResponse", {
+      const response = await axios.get("/ai/generateResponse", {
         message: chatMessage,
       });
 
