@@ -1,8 +1,11 @@
 const express = require("express");
 const runConversation = require("../controller/geminiResponse");
 
-const geminiAiRoutes = express.Router();
+const app = express();
 
-geminiAiRoutes.post("/generateResponse", runConversation);
+app.use(express.json());
+
+
+app.post("/generateResponse", runConversation);
 
 module.exports = geminiAiRoutes;
