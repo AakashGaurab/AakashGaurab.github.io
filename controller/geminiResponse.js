@@ -97,12 +97,12 @@ async function userData(dataType) {
         },
       ],
     },
-    certifications_awards: [
-      {
+    certifications_awards: {
+      prompt_engineer: {
         title: "Prompt Engineer",
         issued_by: "Masai School",
       },
-    ],
+    },
     education: {
       degree: "Bachelor of Computer Application",
       institution: "IGNOU",
@@ -141,8 +141,10 @@ const functions = {
   },
 };
 
-const genAI = new GoogleGenerativeAI(`${process.env.NEXT_PUBLIC_MY_SECRET_API_KEY}`);
- 
+const genAI = new GoogleGenerativeAI(
+  `${process.env.NEXT_PUBLIC_MY_SECRET_API_KEY}`
+);
+
 const model = genAI.getGenerativeModel({
   model: "gemini-1.5-flash",
   systemInstruction: {
