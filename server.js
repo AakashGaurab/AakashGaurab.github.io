@@ -1,7 +1,10 @@
 const express = require("express");
 const next = require("next");
 const geminiAiRoutes = require("./routes/geminiAiRoutes");
-require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` });
+const deepSeekRoute = require("./routes/deepSeekRoutes");
+const fineTuneRoutes = require("./routes/fineTune");
+const summarizeRoutes = require("./routes/summarize");
+require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` });
 
 const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
@@ -17,6 +20,9 @@ app.prepare().then(() => {
   });
 
   server.use("/ai", geminiAiRoutes);
+  server.use("/deepSeek", deepSeekRoute);
+  server.use("/fineTune", fineTuneRoutes);
+  server.use("/summarize",summarizeRoutes);
 
   // Handle all other requests with Next.js
   server.all("*", (req, res) => {
