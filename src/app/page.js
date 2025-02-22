@@ -22,9 +22,15 @@ export default function Home() {
       setIsLoading(false);
     };
 
+    // Set a timeout to ensure the loader doesn't get stuck
+    const timeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 4000); // 3 seconds max
+
     window.addEventListener("load", handleLoad);
 
     return () => {
+      clearTimeout(timeout);
       window.removeEventListener("load", handleLoad);
     };
   }, []);
