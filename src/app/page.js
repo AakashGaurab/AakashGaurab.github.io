@@ -2,7 +2,7 @@
 
 import { Navbar } from "@/components/Navbar/Navbar";
 import styles from "./page.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { navbarOptions } from "@/utils/constants";
 import { Intro } from "@/components/Intro/Intro";
 import { About } from "@/components/AboutMe/AboutMe";
@@ -11,10 +11,25 @@ import Skills from "@/components/Skills/Skills";
 import Contact from "@/components/Contact/Contact";
 import { handleOptionsClick } from "@/utils/function";
 import { Bot } from "@/components/Bot/bot";
+import { Shuriken } from "@/components/loader/shurikenLoader/shuriken";
 
 export default function Home() {
   const [showDropDown, setShowDropDown] = useState(false);
-  return (
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const handleLoad = () => {
+      setIsLoading(false);
+    };
+
+    window.addEventListener("load", handleLoad);
+
+    return () => {
+      window.removeEventListener("load", handleLoad);
+    };
+  }, []);
+
+  return !isLoading ? (
     <div className={styles.page}>
       <div
         className={`${styles.dropDownNavbar} ${
@@ -52,6 +67,11 @@ export default function Home() {
       <About />
       <Contact />
       <Bot />
+    </div>
+  ) : (
+    <div className={styles.pageLoaderContainer}>
+      <Shuriken />
+      <h3 className={styles.loadingText}> Loading . . .</h3>
     </div>
   );
 }

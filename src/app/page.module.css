@@ -3,6 +3,26 @@
   height: 100vh;
 }
 
+.pageLoaderContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loadingText {
+  margin-left: 2%;
+}
+
+@media all and (min-width: 100px) and (max-width: 500px) {
+  .pageLoaderContainer {
+    flex-direction: column;
+  }
+  .loadingText {
+    margin-top: 10%;
+  }
+}
 @keyframes slideFromTop {
   0% {
     transform: translateY(-100%);
