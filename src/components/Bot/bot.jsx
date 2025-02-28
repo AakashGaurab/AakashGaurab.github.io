@@ -12,8 +12,8 @@ export const Bot = () => {
   };
   return isChatAreaVisible ? (
     <div className={styles.container}>
-      (
-      <ChatArea handleCloseChatArea={handleChatAreaVisibility} />)
+      
+      <ChatArea handleCloseChatArea={handleChatAreaVisibility} />
     </div>
   ) : (
     <div onClick={handleChatAreaVisibility} className={styles.container2}>
