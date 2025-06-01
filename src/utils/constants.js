@@ -7,7 +7,7 @@ export const navbarOptions = [
   "Chat with Bot"
 ];
 export const RESUME_LINK =
-  "https://drive.google.com/file/d/1CTHL-o0kiE9N0pnVgZHDOPtqI5p3PUTf/view?usp=sharing";
+  "https://drive.google.com/file/d/1cuwnS2-n1qg3mjzMWVY4ESi89zEPdWIg/view?usp=sharing";
 
 export const RESUME_NAME = "Aakash-Gaurab_Resume.pdf";
 
