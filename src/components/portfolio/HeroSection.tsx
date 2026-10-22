@@ -1,6 +1,18 @@
+import { motion } from 'motion/react';
 import { ArrowDown, Activity, ArrowUpRight } from 'lucide-react';
 import { usePortfolio } from '../../context/PortfolioContext';
 import { SITE_CONFIG } from '../../config/site.config';
+import { revealTransition } from '../common/Reveal';
+
+// Left-column items cascade in one after another on first load
+const heroStagger = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.08, delayChildren: 0.05 } }
+};
+const heroItem = {
+  hidden: { opacity: 0, y: 24 },
+  show: { opacity: 1, y: 0, transition: revealTransition() }
+};
 
 interface HeroSectionProps {
   /** Omitted when there is no projects section to scroll to. */
@@ -25,9 +37,9 @@ export function HeroSection({ onExploreClick, onContactClick }: HeroSectionProps
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Column: Editorial Headline & Value Narrative */}
-          <div className="lg:col-span-7 space-y-6">
+          <motion.div variants={heroStagger} initial="hidden" animate="show" className="lg:col-span-7 space-y-6">
             {/* Status Lead-in */}
-            <div className="flex items-center gap-3">
+            <motion.div variants={heroItem} className="flex items-center gap-3">
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--color-surface)] border border-[var(--color-border)] text-xs font-mono text-[#e2e0fa]">
                 <span className={`w-2 h-2 rounded-full ${persona.isAvailable ? 'bg-[var(--color-secondary)] animate-pulse' : 'bg-[#a1a1aa]'}`} />
                 <span>{persona.roleTitle}</span>
@@ -35,41 +47,45 @@ export function HeroSection({ onExploreClick, onContactClick }: HeroSectionProps
               <span className="text-xs text-[#71717a] font-mono hidden sm:inline">
                 {persona.location}
               </span>
-            </div>
+            </motion.div>
 
             {/* Display Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-display tracking-tight text-white leading-[1.08] text-balance">
+            <motion.h1 variants={heroItem} className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-display tracking-tight text-white leading-[1.08] text-balance">
               {persona.headline}
-            </h1>
+            </motion.h1>
 
             {/* Body Narrative */}
-            <p className="text-base sm:text-lg text-[#cbc3d7] max-w-xl leading-relaxed">
+            <motion.p variants={heroItem} className="text-base sm:text-lg text-[#cbc3d7] max-w-xl leading-relaxed">
               {persona.leadTagline}
-            </p>
+            </motion.p>
 
             {/* CTAs */}
-            <div className="flex flex-wrap items-center gap-4 pt-2">
+            <motion.div variants={heroItem} className="flex flex-wrap items-center gap-4 pt-2">
               {onExploreClick && (
-                <button
+                <motion.button
+                  whileHover={{ scale: 1.03, y: -2 }}
+                  whileTap={{ scale: 0.97 }}
                   onClick={onExploreClick}
                   className="px-5 py-2.5 bg-[var(--color-primary)] hover:bg-[var(--color-primary)] text-white text-sm font-semibold rounded-lg flex items-center gap-2 shadow-[0_4px_20px_-2px_color-mix(in_srgb,var(--color-primary)_35%,transparent)] transition-all cursor-pointer"
                 >
                   <span>{hero.primaryCta}</span>
                   <ArrowDown className="w-4 h-4" />
-                </button>
+                </motion.button>
               )}
-              <button
+              <motion.button
+                whileHover={{ scale: 1.03, y: -2 }}
+                whileTap={{ scale: 0.97 }}
                 onClick={onContactClick}
                 className="px-5 py-2.5 bg-[var(--color-surface)] hover:bg-[var(--color-surface-container)] text-[#e2e0fa] border border-[var(--color-border)] hover:border-[var(--color-border-strong)] text-sm font-medium rounded-lg flex items-center gap-2 transition-all cursor-pointer"
               >
                 <span>{hero.secondaryCta}</span>
                 <ArrowUpRight className="w-4 h-4 text-[var(--color-primary)]" />
-              </button>
-            </div>
+              </motion.button>
+            </motion.div>
 
             {/* Claim-to-Proof Quantitative Adjacency Bar */}
             {metrics.length > 0 && (
-              <div className="pt-6 border-t border-[var(--color-border)]/60 grid grid-cols-3 gap-4 max-w-lg">
+              <motion.div variants={heroItem} className="pt-6 border-t border-[var(--color-border)]/60 grid grid-cols-3 gap-4 max-w-lg">
                 {metrics.map((m) => (
                   <div key={m.label}>
                     <span className="text-xs font-mono text-[#71717a] block">{m.label}</span>
@@ -77,13 +93,22 @@ export function HeroSection({ onExploreClick, onContactClick }: HeroSectionProps
                     <span className="text-[11px] text-[#958ea0] block">{m.caption}</span>
                   </div>
                 ))}
-              </div>
+              </motion.div>
             )}
-          </div>
+          </motion.div>
 
           {/* Right Column: Visual Container & Studio Atmosphere */}
-          <div className="lg:col-span-5 relative">
-            <div className="relative rounded-2xl overflow-hidden border border-[var(--color-border)] bg-[var(--color-surface)] shadow-2xl group">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.94 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={revealTransition(0.2)}
+            className="lg:col-span-5 relative"
+          >
+            {/* Gentle idle float */}
+            <motion.div
+              animate={{ y: [0, -8, 0] }}
+              transition={{ repeat: Infinity, duration: 6, ease: 'easeInOut' }}
+              className="relative rounded-2xl overflow-hidden border border-[var(--color-border)] bg-[var(--color-surface)] shadow-2xl group">
               <div className="aspect-[4/3] sm:aspect-[16/10] overflow-hidden">
                 <img
                   src={persona.heroImage}
@@ -114,8 +139,8 @@ export function HeroSection({ onExploreClick, onContactClick }: HeroSectionProps
                   </div>
                 )}
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>

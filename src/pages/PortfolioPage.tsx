@@ -1,11 +1,14 @@
 import React from 'react';
+import { MotionConfig } from 'motion/react';
 import { HeroSection } from '../components/portfolio/HeroSection';
+import { MarqueeRibbon } from '../components/portfolio/MarqueeRibbon';
 import { ProjectShowcase } from '../components/portfolio/ProjectShowcase';
 import { TechStackSection } from '../components/portfolio/TechStackSection';
 import { ExperienceTimeline } from '../components/portfolio/ExperienceTimeline';
 import { ContactSection } from '../components/portfolio/ContactSection';
 import { ProjectDetailModal } from '../components/common/ProjectDetailModal';
 import { ChatWidget } from '../components/common/ChatWidget';
+import { InteractiveBackground } from '../components/common/InteractiveBackground';
 import { usePortfolio } from '../context/PortfolioContext';
 
 export function PortfolioPage() {
@@ -19,33 +22,41 @@ export function PortfolioPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[var(--color-bg)]">
-      {/* Hero Section */}
-      <HeroSection
-        onExploreClick={projects.length > 0 ? () => handleScrollToSection('projects') : undefined}
-        onContactClick={() => handleScrollToSection('contact')}
-      />
+    <MotionConfig reducedMotion="user">
+      {/* Fixed interactive canvas; the positioned wrapper below (no z-index) paints over it */}
+      <InteractiveBackground />
 
-      {/* Projects Showcase Bento Grid */}
-      <ProjectShowcase />
+      <div className="relative min-h-screen">
+        {/* Hero Section */}
+        <HeroSection
+          onExploreClick={projects.length > 0 ? () => handleScrollToSection('projects') : undefined}
+          onContactClick={() => handleScrollToSection('contact')}
+        />
 
-      {/* Engineering Toolchain & Capabilities */}
-      <TechStackSection />
+        {/* Scrolling skill ribbon */}
+        <MarqueeRibbon />
 
-      {/* Track Record & Experience */}
-      <ExperienceTimeline />
+        {/* Projects Showcase Bento Grid */}
+        <ProjectShowcase />
 
-      {/* Inquiries & Contact Form */}
-      <ContactSection />
+        {/* Engineering Toolchain & Capabilities */}
+        <TechStackSection />
 
-      {/* Lightbox Modal for Selected Project */}
-      <ProjectDetailModal
-        project={selectedProject}
-        onClose={() => setSelectedProject(null)}
-      />
+        {/* Track Record & Experience */}
+        <ExperienceTimeline />
 
-      {/* Floating AI chat assistant */}
-      <ChatWidget />
-    </div>
+        {/* Inquiries & Contact Form */}
+        <ContactSection />
+
+        {/* Lightbox Modal for Selected Project */}
+        <ProjectDetailModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+
+        {/* Floating AI chat assistant */}
+        <ChatWidget />
+      </div>
+    </MotionConfig>
   );
 }

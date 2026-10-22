@@ -14,7 +14,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="w-full bg-[var(--color-bg)] border-t border-[var(--color-border)] text-[#a1a1aa] text-sm">
+    <footer className="relative w-full bg-[var(--color-bg)] border-t border-[var(--color-border)] text-[#a1a1aa] text-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
           {/* Brand Info */}

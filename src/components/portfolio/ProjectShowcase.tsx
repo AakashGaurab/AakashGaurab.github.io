@@ -2,6 +2,7 @@ import React from 'react';
 import { usePortfolio } from '../../context/PortfolioContext';
 import { SITE_CONFIG, PROJECT_CATEGORIES } from '../../config/site.config';
 import { Search, ExternalLink, ArrowRight, Layers, Sparkles } from 'lucide-react';
+import { Reveal, TiltCard } from '../common/Reveal';
 
 export function ProjectShowcase() {
   const {
@@ -26,7 +27,7 @@ export function ProjectShowcase() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-          <div>
+          <Reveal>
             <div className="flex items-center gap-2 mb-2 text-xs font-mono text-[var(--color-primary)] uppercase tracking-wider">
               <Layers className="w-4 h-4" />
               <span>{copy.eyebrow}</span>
@@ -37,7 +38,7 @@ export function ProjectShowcase() {
             <p className="text-sm text-[#cbc3d7] mt-2 max-w-xl">
               {copy.subtitle}
             </p>
-          </div>
+          </Reveal>
 
           {/* Search input with sleek dark styling */}
           <div className="relative w-full md:w-72">
@@ -99,8 +100,10 @@ export function ProjectShowcase() {
               const gridSpan = isLead ? 'lg:col-span-12' : index % 3 === 0 ? 'lg:col-span-8' : 'lg:col-span-4 md:col-span-1';
 
               return (
-                <div
+                <TiltCard
                   key={project.id}
+                  delay={(index % 3) * 0.08}
+                  maxTilt={isLead ? 3 : 6}
                   onClick={() => setSelectedProject(project)}
                   className={`${gridSpan} group cursor-pointer relative bg-[var(--color-surface)] hover:bg-[var(--color-surface-container)] border border-[var(--color-border)] hover:border-[var(--color-border-strong)] rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-[0_12px_36px_-6px_color-mix(in_srgb,var(--color-bg)_80%,transparent),0_0_24px_-4px_color-mix(in_srgb,var(--color-primary)_20%,transparent)] flex flex-col`}
                 >
@@ -173,7 +176,7 @@ export function ProjectShowcase() {
                       </div>
                     </div>
                   </div>
-                </div>
+                </TiltCard>
               );
             })}
           </div>
