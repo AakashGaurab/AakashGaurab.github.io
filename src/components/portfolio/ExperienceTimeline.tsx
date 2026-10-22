@@ -1,6 +1,7 @@
 import { Briefcase, Milestone, CheckCircle2 } from 'lucide-react';
 import { usePortfolio } from '../../context/PortfolioContext';
 import { SITE_CONFIG } from '../../config/site.config';
+import { Reveal } from '../common/Reveal';
 
 export function ExperienceTimeline() {
   const { experience } = usePortfolio();
@@ -12,7 +13,7 @@ export function ExperienceTimeline() {
     <section id="experience" className="py-20 border-b border-[var(--color-border)] bg-[var(--color-bg)]/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-14">
+        <Reveal className="mb-14">
           <div className="flex items-center gap-2 mb-2 text-xs font-mono text-[var(--color-primary)] uppercase tracking-wider">
             <Milestone className="w-4 h-4" />
             <span>{copy.eyebrow}</span>
@@ -23,13 +24,16 @@ export function ExperienceTimeline() {
           <p className="text-sm text-[#cbc3d7] mt-2 max-w-2xl">
             {copy.subtitle}
           </p>
-        </div>
+        </Reveal>
 
         {/* Timeline Items */}
         <div className="space-y-6">
-          {experience.map((item) => (
-            <div
+          {experience.map((item, idx) => (
+            <Reveal
               key={item.id}
+              x={-32}
+              y={0}
+              delay={idx * 0.08}
               className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl p-6 sm:p-8 hover:border-[var(--color-border-strong)] transition-colors"
             >
               <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 mb-3">
@@ -74,7 +78,7 @@ export function ExperienceTimeline() {
                   </span>
                 ))}
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

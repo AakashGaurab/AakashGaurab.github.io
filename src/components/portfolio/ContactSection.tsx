@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { usePortfolio } from '../../context/PortfolioContext';
 import { Mail, Send, CheckCircle2, AlertCircle, Clock, MapPin } from 'lucide-react';
 import { SITE_CONFIG } from '../../config/site.config';
+import { Reveal } from '../common/Reveal';
 
 export function ContactSection() {
   const { sendMessage, persona } = usePortfolio();
@@ -42,11 +43,11 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-[var(--color-bg)] relative">
+    <section id="contact" className="py-20 bg-[var(--color-bg)]/40 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Left Column: Contact Narrative */}
-          <div className="lg:col-span-5 space-y-6">
+          <Reveal className="lg:col-span-5 space-y-6">
             <div className="flex items-center gap-2 text-xs font-mono text-[var(--color-primary)] uppercase tracking-wider">
               <Mail className="w-4 h-4" />
               <span>{copy.eyebrow}</span>
@@ -82,10 +83,10 @@ export function ContactSection() {
                 {persona.contactEmail}
               </a>
             </div>
-          </div>
+          </Reveal>
 
           {/* Right Column: Interactive Form */}
-          <div className="lg:col-span-7">
+          <Reveal delay={0.12} className="lg:col-span-7">
             <div className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-2xl p-6 sm:p-8 shadow-xl">
               <h3 className="text-xl font-bold font-display text-white mb-6">
                 {copy.formTitle}
@@ -184,7 +185,7 @@ export function ContactSection() {
                 </div>
               </form>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>
