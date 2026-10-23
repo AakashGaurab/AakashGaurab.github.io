@@ -115,6 +115,8 @@ export function ProjectShowcase() {
                     <img
                       src={project.coverImage}
                       alt={project.title}
+                      loading="lazy"
+                      decoding="async"
                       referrerPolicy="no-referrer"
                       className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
                     />

@@ -113,6 +113,7 @@ export function HeroSection({ onExploreClick, onContactClick }: HeroSectionProps
                 <img
                   src={persona.heroImage}
                   alt={persona.name}
+                  fetchPriority="high"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
