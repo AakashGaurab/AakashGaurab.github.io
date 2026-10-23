@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { RouterProvider, useRouter } from './context/RouterContext';
 import { AuthProvider } from './context/AuthContext';
 import { PortfolioProvider } from './context/PortfolioContext';
@@ -11,8 +11,10 @@ import { Navbar } from './components/common/Navbar';
 import { Footer } from './components/common/Footer';
 import { ProtectedRoute } from './components/common/ProtectedRoute';
 import { PortfolioPage } from './pages/PortfolioPage';
-import { LoginPage } from './pages/LoginPage';
-import { AdminPage } from './pages/AdminPage';
+
+// Admin and login are code-split so visitors of the public site don't download them.
+const LoginPage = lazy(() => import('./pages/LoginPage').then((m) => ({ default: m.LoginPage })));
+const AdminPage = lazy(() => import('./pages/AdminPage').then((m) => ({ default: m.AdminPage })));
 
 function AppContent() {
   const { path } = useRouter();
@@ -44,7 +46,7 @@ function AppContent() {
 
       {/* Main Content Area */}
       <main className="flex-1 transition-opacity duration-200">
-        {renderCurrentRoute()}
+        <Suspense fallback={null}>{renderCurrentRoute()}</Suspense>
       </main>
 
       {/* Footer */}
